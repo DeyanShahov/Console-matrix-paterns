@@ -8,16 +8,16 @@ namespace Console_matrix_paterns
         static void Main(string[] args)
         {
             ActionExecutor action = new ActionExecutor();
-       
+
             while (true)
-            {             
+            {
                 Console.Write("Изберете номер на шаблон: ");
                 int numberPattern = int.Parse(Console.ReadLine());
                 Console.Clear();
                 Console.WriteLine();
                 action.ExecuteAction(numberPattern);
                 Console.WriteLine();
-                
+
             }
 
         }
@@ -25,16 +25,14 @@ namespace Console_matrix_paterns
 
     internal class ActionExecutor
     {
-        public void ExecuteAction(int number)
+        public void ExecuteAction(int numberPattern)
         {
             int num = 5;
+            int count = 1;
 
-            switch (number)
+            switch (numberPattern)
             {
                 case 1:
-                    string paternName = "Patern 1";
-                    int numPattern = 1;               
-
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
@@ -45,9 +43,6 @@ namespace Console_matrix_paterns
                     }
                     break;
                 case 2:
-                    string paternName2 = "Patern 2";
-                    int numPattern2 = 2;
-
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
@@ -55,12 +50,9 @@ namespace Console_matrix_paterns
                             Console.Write($"{i + 1} ");
                         }
                         Console.WriteLine();
-                    }                   
+                    }
                     break;
                 case 3:
-                    string paternName3 = "Patern 3";
-                    int numPattern3 = 3;
-
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
@@ -71,9 +63,6 @@ namespace Console_matrix_paterns
                     }
                     break;
                 case 4:
-                    string paternName4 = "Patern 4";
-                    int numPattern4 = 4;
-
                     for (int i = num; i > 0; i--)
                     {
                         for (int j = num; j > 0; j--)
@@ -83,7 +72,37 @@ namespace Console_matrix_paterns
                         Console.WriteLine();
                     }
                     break;
-
+                case 5:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = num; j > 0; j--)
+                        {
+                            Console.Write($"{j} ");
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 6:
+                    for (int i = 1; i <= num; i++)
+                    {
+                        for (int j = 1; j <= num; j++)
+                        {
+                            Console.Write(count < 10 ? $" {count++} " : $"{count++} ");
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 7:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Console.Write(count < 10 ? $" {count} " : $"{count} ");
+                            count += 2;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
                 default:
                     Console.WriteLine("Невалиден номер на действие");
                     break;
