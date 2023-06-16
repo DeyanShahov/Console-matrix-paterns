@@ -13,10 +13,10 @@ namespace Console_matrix_paterns
             {
                 Console.Write("Изберете номер на шаблон: ");
                 int numberPattern = int.Parse(Console.ReadLine());
-                Console.Clear();
-                Console.WriteLine();
-                action.ExecuteAction(numberPattern);
-                Console.WriteLine();
+                Console.Clear();//clear console
+                Console.WriteLine();//add new line for bether reading
+                action.ExecuteAction(numberPattern);//run pattern
+                Console.WriteLine();//add new line for bether reading
 
             }
 
@@ -99,6 +99,76 @@ namespace Console_matrix_paterns
                         {
                             Console.Write(count < 10 ? $" {count} " : $"{count} ");
                             count += 2;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 8:
+                    count++;
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Console.Write(count < 10 ? $" {count} " : $"{count} ");
+                            count += 2;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 9:
+                    for (int i = 1; i <= num; i++)
+                    {
+                        for (int j = 1; j <= num; j++)
+                        {
+                            int result = i * j;
+                            Console.Write(result < 10 ? $" {result} " : $"{result} ");
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 10:
+                    for (int i = 1; i <= num; i++)
+                    {
+                        for (int j = 1; j <= 3; j++)
+                        {
+                            Console.Write($" {j} {i}");
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 11:
+                    for (int i = 1; i <= num; i++)
+                    {
+                        for (int j = 1; j <= 3; j++)
+                        {
+                            Console.Write($" {i} {j}");
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 12:
+                    for (int i = 1; i <= num; i++)
+                    {
+                        int sum = i;
+
+                        for (int j = 1; j <= num; j++)
+                        {
+                            Console.Write( sum < 10 ? $" {sum} " : $"{sum} ");
+                            sum += num;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 13:
+                    Console.Write("Not implemented yet");
+                    break; //ToDo ...
+                case 14:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            int x = (num - i) + num * j;
+                            Console.Write( x < 10 ? $" {x} " : $"{x} ");
                         }
                         Console.WriteLine();
                     }
