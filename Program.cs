@@ -47,7 +47,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Console.Write($"{i + 1} ");
+                            Print(i + 1);
                         }
                         Console.WriteLine();
                     }
@@ -56,9 +56,7 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
-                        {
-                            Console.Write($"{j + 1} ");
-                        }
+                            Print(j + 1);
                         Console.WriteLine();
                     }
                     break;
@@ -66,9 +64,7 @@ namespace Console_matrix_paterns
                     for (int i = num; i > 0; i--)
                     {
                         for (int j = num; j > 0; j--)
-                        {
-                            Console.Write($"{i} ");
-                        }
+                            Print(i);
                         Console.WriteLine();
                     }
                     break;
@@ -76,9 +72,7 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = num; j > 0; j--)
-                        {
-                            Console.Write($"{j} ");
-                        }
+                            Print(j);
                         Console.WriteLine();
                     }
                     break;
@@ -87,7 +81,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 1; j <= num; j++)
                         {
-                            Console.Write(count < 10 ? $" {count++} " : $"{count++} ");
+                            Print(count++);
                         }
                         Console.WriteLine();
                     }
@@ -97,7 +91,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Console.Write(count < 10 ? $" {count} " : $"{count} ");
+                            Print(count);
                             count += 2;
                         }
                         Console.WriteLine();
@@ -109,7 +103,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Console.Write(count < 10 ? $" {count} " : $"{count} ");
+                            Print(count);
                             count += 2;
                         }
                         Console.WriteLine();
@@ -120,8 +114,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 1; j <= num; j++)
                         {
-                            int result = i * j;
-                            Console.Write(result < 10 ? $" {result} " : $"{result} ");
+                            Print(i * j);
                         }
                         Console.WriteLine();
                     }
@@ -153,7 +146,7 @@ namespace Console_matrix_paterns
 
                         for (int j = 1; j <= num; j++)
                         {
-                            Console.Write(sum < 10 ? $" {sum} " : $"{sum} ");
+                            Print(sum);
                             sum += num;
                         }
                         Console.WriteLine();
@@ -167,7 +160,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                             Print((num - i) + num * j);
-                     
+
                         Console.WriteLine();
                     }
                     break;
@@ -187,10 +180,8 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 1; j <= num; j++)
-                        {
-                            int result = i + j;
-
-                            Print(result);
+                        {                           
+                            Print(i + j);
                         }
                         Console.WriteLine();
                     }
