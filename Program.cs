@@ -153,7 +153,7 @@ namespace Console_matrix_paterns
 
                         for (int j = 1; j <= num; j++)
                         {
-                            Console.Write( sum < 10 ? $" {sum} " : $"{sum} ");
+                            Console.Write(sum < 10 ? $" {sum} " : $"{sum} ");
                             sum += num;
                         }
                         Console.WriteLine();
@@ -166,9 +166,31 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
+                            Print((num - i) + num * j);
+                     
+                        Console.WriteLine();
+                    }
+                    break;
+                case 15:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
                         {
                             int x = (num - i) + num * j;
-                            Console.Write( x < 10 ? $" {x} " : $"{x} ");
+                            int y = num * j + i + 1;
+                            Print(j % 2 == 0 ? x : y);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 16:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 1; j <= num; j++)
+                        {
+                            int result = i + j;
+
+                            Print(result);
                         }
                         Console.WriteLine();
                     }
@@ -177,6 +199,11 @@ namespace Console_matrix_paterns
                     Console.WriteLine("Невалиден номер на действие");
                     break;
             }
+        }
+
+        private static void Print(int x)
+        {
+            Console.Write(x < 10 ? $" {x} " : $"{x} ");
         }
     }
 }
