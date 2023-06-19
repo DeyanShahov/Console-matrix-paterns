@@ -29,6 +29,7 @@ namespace Console_matrix_paterns
         {
             int num = 5;
             int count = 1;
+            var maniq = num % 2 == 0 ? 0 : 1;
 
             switch (numberPattern)
             {
@@ -180,8 +181,97 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 1; j <= num; j++)
-                        {                           
+                        {
                             Print(i + j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 17:
+                    for (int i = 1; i <= num; i++)
+                    {
+                        int sum = i - 1;
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(i + sum);
+                            sum += 2;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 18:
+                    for (int x = 0; x < num; x++)
+                    {
+                        for (int z = 0; z < num; z++) Print((x + z) % 2);
+                        Console.WriteLine();
+                    }
+                    break;
+                case 19:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print((i + j) % 2 != 0 ? 0 : 1);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 20:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(i % 2 == 0 ? j % 2 == 0 ? 1 : 0 : 0);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 21:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(i % 2 == 0 ? j % 2 == 0 ? 0 : 1 : 0);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 22:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(i % 2 == 0 ? 0 : 1);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 23:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(i % 2 == 0 ? 1 : 0);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 24:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(j % 2 == 0 ? 0 : 1);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 25:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            Print(j % 2 == 0 ? 1 : 0);
                         }
                         Console.WriteLine();
                     }
