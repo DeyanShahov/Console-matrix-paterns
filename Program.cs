@@ -29,7 +29,6 @@ namespace Console_matrix_paterns
         {
             int num = 5;
             int count = 1;
-            var maniq = num % 2 == 0 ? 0 : 1;
 
             switch (numberPattern)
             {
@@ -48,7 +47,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(i + 1);
+                            PrintInt(i + 1);
                         }
                         Console.WriteLine();
                     }
@@ -57,7 +56,7 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
-                            Print(j + 1);
+                            PrintInt(j + 1);
                         Console.WriteLine();
                     }
                     break;
@@ -65,7 +64,7 @@ namespace Console_matrix_paterns
                     for (int i = num; i > 0; i--)
                     {
                         for (int j = num; j > 0; j--)
-                            Print(i);
+                            PrintInt(i);
                         Console.WriteLine();
                     }
                     break;
@@ -73,7 +72,7 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = num; j > 0; j--)
-                            Print(j);
+                            PrintInt(j);
                         Console.WriteLine();
                     }
                     break;
@@ -82,7 +81,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 1; j <= num; j++)
                         {
-                            Print(count++);
+                            PrintInt(count++);
                         }
                         Console.WriteLine();
                     }
@@ -92,7 +91,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(count);
+                            PrintInt(count);
                             count += 2;
                         }
                         Console.WriteLine();
@@ -104,7 +103,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(count);
+                            PrintInt(count);
                             count += 2;
                         }
                         Console.WriteLine();
@@ -115,7 +114,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 1; j <= num; j++)
                         {
-                            Print(i * j);
+                            PrintInt(i * j);
                         }
                         Console.WriteLine();
                     }
@@ -147,7 +146,7 @@ namespace Console_matrix_paterns
 
                         for (int j = 1; j <= num; j++)
                         {
-                            Print(sum);
+                            PrintInt(sum);
                             sum += num;
                         }
                         Console.WriteLine();
@@ -160,7 +159,7 @@ namespace Console_matrix_paterns
                     for (int i = 0; i < num; i++)
                     {
                         for (int j = 0; j < num; j++)
-                            Print((num - i) + num * j);
+                            PrintInt((num - i) + num * j);
 
                         Console.WriteLine();
                     }
@@ -172,7 +171,7 @@ namespace Console_matrix_paterns
                         {
                             int x = (num - i) + num * j;
                             int y = num * j + i + 1;
-                            Print(j % 2 == 0 ? x : y);
+                            PrintInt(j % 2 == 0 ? x : y);
                         }
                         Console.WriteLine();
                     }
@@ -182,7 +181,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 1; j <= num; j++)
                         {
-                            Print(i + j);
+                            PrintInt(i + j);
                         }
                         Console.WriteLine();
                     }
@@ -193,7 +192,7 @@ namespace Console_matrix_paterns
                         int sum = i - 1;
                         for (int j = 0; j < num; j++)
                         {
-                            Print(i + sum);
+                            PrintInt(i + sum);
                             sum += 2;
                         }
                         Console.WriteLine();
@@ -202,7 +201,7 @@ namespace Console_matrix_paterns
                 case 18:
                     for (int x = 0; x < num; x++)
                     {
-                        for (int z = 0; z < num; z++) Print((x + z) % 2);
+                        for (int z = 0; z < num; z++) PrintInt((x + z) % 2);
                         Console.WriteLine();
                     }
                     break;
@@ -211,7 +210,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print((i + j) % 2 != 0 ? 0 : 1);
+                            PrintInt((i + j) % 2 != 0 ? 0 : 1);
                         }
                         Console.WriteLine();
                     }
@@ -221,7 +220,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(i % 2 == 0 ? j % 2 == 0 ? 1 : 0 : 0);
+                            PrintInt(i % 2 == 0 ? j % 2 == 0 ? 1 : 0 : 0);
                         }
                         Console.WriteLine();
                     }
@@ -231,7 +230,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(i % 2 == 0 ? j % 2 == 0 ? 0 : 1 : 0);
+                            PrintInt(i % 2 == 0 ? j % 2 == 0 ? 0 : 1 : 0);
                         }
                         Console.WriteLine();
                     }
@@ -241,7 +240,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(i % 2 == 0 ? 0 : 1);
+                            PrintInt(i % 2 == 0 ? 0 : 1);
                         }
                         Console.WriteLine();
                     }
@@ -251,7 +250,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(i % 2 == 0 ? 1 : 0);
+                            PrintInt(i % 2 == 0 ? 1 : 0);
                         }
                         Console.WriteLine();
                     }
@@ -261,7 +260,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(j % 2 == 0 ? 0 : 1);
+                            PrintInt(j % 2 == 0 ? 0 : 1);
                         }
                         Console.WriteLine();
                     }
@@ -271,7 +270,110 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            Print(j % 2 == 0 ? 1 : 0);
+                            PrintInt(j % 2 == 0 ? 1 : 0);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 26:
+                    for (char i = 'A'; i <= 'E'; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            PrintChar(i);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 27:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (char j = 'A'; j <= 'E'; j++)
+                        {
+                            PrintChar(j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 28:
+                    for (char i = 'E'; i >= 'A'; i--)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            PrintChar(i);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 29:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (char j = 'E'; j >= 'A'; j--)
+                        {
+                            PrintChar(j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 30:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            PrintChar((char)(64 + count++));
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 31:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            PrintChar((char)(65 + i + j));
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 32:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            PrintChar((char)(65 + i + (j * num)));
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 33:
+                    Console.Write("Not implemented yet");
+                    break; //ToDo ...
+                case 34:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            PrintChar(i >= j ? '*' : ' ');
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 35:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            if (i >= j) PrintInt(i + 1);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 36:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            if(i >= j) PrintInt(j + 1);
                         }
                         Console.WriteLine();
                     }
@@ -282,9 +384,14 @@ namespace Console_matrix_paterns
             }
         }
 
-        private static void Print(int x)
+        private static void PrintInt(int x)
         {
             Console.Write(x < 10 ? $" {x} " : $"{x} ");
+        }
+
+        private static void PrintChar(char ch)
+        {
+            Console.Write("{0} ", ch);
         }
     }
 }
