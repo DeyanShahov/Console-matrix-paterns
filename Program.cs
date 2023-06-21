@@ -378,6 +378,27 @@ namespace Console_matrix_paterns
                         Console.WriteLine();
                     }
                     break;
+                case 37:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            if( i >= j ) PrintInt(num - i);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 38:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < 0; j++)
+                        {
+                            Console.Write(num - j);
+                            if (i >= j) PrintInt(num - j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
                 default:
                     Console.WriteLine("Невалиден номер на действие");
                     break;
