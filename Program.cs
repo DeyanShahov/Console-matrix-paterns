@@ -373,7 +373,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            if(i >= j) PrintInt(j + 1);
+                            if (i >= j) PrintInt(j + 1);
                         }
                         Console.WriteLine();
                     }
@@ -383,7 +383,7 @@ namespace Console_matrix_paterns
                     {
                         for (int j = 0; j < num; j++)
                         {
-                            if( i >= j ) PrintInt(num - i);
+                            if (i >= j) PrintInt(num - i);
                         }
                         Console.WriteLine();
                     }
@@ -391,10 +391,86 @@ namespace Console_matrix_paterns
                 case 38:
                     for (int i = 0; i < num; i++)
                     {
-                        for (int j = 0; j < 0; j++)
+                        for (int j = 0; j < num; j++)
                         {
-                            Console.Write(num - j);
                             if (i >= j) PrintInt(num - j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 39:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            if (i >= j) PrintInt(num - i + j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 40:
+                    count++;
+
+                    for (int i = 1; i <= num; i++)
+                    {
+                        for (int j = 1; j <= num; j++)
+                        {
+                            if (i >= j) PrintInt(j * 2);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 41:
+                    for (int i = 0; i < num - 1; i++)
+                    {
+                        for (int j = 0; j < num - 1; j++)
+                        {
+                            if (i >= j) PrintInt(count++);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 42:
+                    for (int i = 0; i < num; i++)
+                    {
+                        count = 1;
+
+                        for (int j = 0; j < num; j++)
+                        {
+                            if (i >= j) PrintInt(i + 1 + j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 43:
+                    count++;
+                    for (int i = 1; i <= num; i++)
+                    {
+                        for (int j = 1; j <= num; j++)
+                        {
+                            if (i >= j) PrintInt(i == 1 ? 1 : (((i * count) - 1) + j * count) - count);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 44:
+                    count = 0;
+                    for (int i = 1; i < num; i++)
+                    {
+                        for (int j = 1; j < num; j++)
+                        {
+                            if (i >= j) PrintInt(i + count - j + 1);
+                        }
+                        count += i;
+                        Console.WriteLine();
+                    }
+                    break;
+                case 45:
+                    for (int i = 0; i < num; i++)
+                    {
+                        for (int j = 0; j < num; j++)
+                        {
+                            if (i >= j) PrintInt();
                         }
                         Console.WriteLine();
                     }
